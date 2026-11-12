@@ -5,7 +5,7 @@
   "fabricLoader": "0.19.3",
   "java": "25",
   "summary": "面向 Minecraft 26.2 / Fabric 的全面性能整合包：客户端渲染与服务端逻辑双侧优化，提供 full（极限性能）与 strict（机制安全）两套配置。",
-  "generatedAt": "2026-11-12T04:55:10Z",
+  "generatedAt": "2026-11-12T05:07:37Z",
   "profiles": {
     "full": "极限性能：包含会改变原版机制的优化项（激活范围、TT20、出生点区块、树叶衰减等）。",
     "strict": "机制安全：只保留不改变红石/流体/刷怪/爆炸/tick 顺序的优化项。"
