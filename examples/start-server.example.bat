@@ -4,6 +4,7 @@ rem 8 GB 内存机器用 4G；服务端与客户端同机时把 -Xmx 降到 3G�
 rem 参数解释见 docs/tuning.md。
 
 cd /d "%~dp0"
+if not exist logs mkdir logs
 
 java -Xms4G -Xmx4G ^
   -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 ^

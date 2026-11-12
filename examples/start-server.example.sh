@@ -4,6 +4,7 @@
 # 参数解释见 docs/tuning.md。
 
 cd "$(dirname "$0")" || exit 1
+mkdir -p logs
 
 exec java -Xms4G -Xmx4G \
   -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 \
