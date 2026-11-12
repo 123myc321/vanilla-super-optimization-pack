@@ -107,6 +107,11 @@ python install.py --side server --profile full --dir "D:\servers\mc" --dry-run
 
 完整参数、逐项解释和替代方案（ZGC）见 [docs/tuning.md](docs/tuning.md)。
 
+## 延伸阅读
+
+选型方法论、审计清单、基准脚本与自制 mod 示例单独整理在：
+[123myc321/mc-tech-server-optimization](https://github.com/123myc321/mc-tech-server-optimization)
+
 ## 验证与实测
 
 静态校验（需要先 `python tools/build_pack.py --download`）：
