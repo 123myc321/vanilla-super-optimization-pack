@@ -1,0 +1,23 @@
+name: verify
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * 1"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download pinned jars and verify hashes
+        run: python tools/build_pack.py --download
+      - name: Static checks
+        run: python tools/verify_pack.py
+      - name: Build mrpack
+        run: python tools/build_pack.py --mrpack
+      - name: Show diff
+        run: git diff --stat

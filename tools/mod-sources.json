@@ -1,0 +1,94 @@
+{
+  "minecraft": "26.2",
+  "fabricLoader": "0.19.3",
+  "java": "25",
+  "mods": [
+    {
+      "slug": "lithium",
+      "profiles": ["full", "strict"],
+      "note": "游戏逻辑优化。full 配置不写任何 override，红石/流体/刷怪/爆炸/随机刻等优化全部开启；strict 配置关闭 12 项会改变行为的 mixin。"
+    },
+    {
+      "slug": "c2me-fabric",
+      "profiles": ["full", "strict"],
+      "note": "并发区块引擎。full 配置开启异步序列化、POI 卸载、含水层优化、流体后处理改期；strict 配置全部回原版行为。"
+    },
+    {
+      "slug": "vmp-fabric",
+      "profiles": ["full", "strict"],
+      "force_env": { "client": "unsupported" },
+      "note": "Very Many Players，高玩家数与区块发送优化。仅供服务端；full 开启异步传送门，strict 关闭。"
+    },
+    {
+      "slug": "modernfix-mvus",
+      "profiles": ["full", "strict"],
+      "note": "ModernFix 的 26.2 维护分支（mVUS）。启动、内存、动态资源、模型加载优化。"
+    },
+    {
+      "slug": "ferrite-core",
+      "profiles": ["full", "strict"],
+      "note": "方块状态内存压缩，显著降低堆占用。"
+    },
+    {
+      "slug": "krypton",
+      "profiles": ["full", "strict"],
+      "note": "网络栈优化（Netty 事件循环、包合并）。"
+    },
+    {
+      "slug": "packet-fixer",
+      "profiles": ["full", "strict"],
+      "note": "放宽数据包/NBT 上限，避免大区块、大容器导致的踢出与静默失败。"
+    },
+    {
+      "slug": "zfastnoise",
+      "profiles": ["full", "strict"],
+      "version": "1.0.40+26.2",
+      "note": "地形生成噪声与表层加速。pin 1.0.40：1.1.x 要求 Fabric Loader >=0.19.5，而本包基线是 0.19.3。full 开启 end/fixed/trivial；strict 关闭这三项。"
+    },
+    {
+      "slug": "sodium",
+      "profiles": ["full", "strict"],
+      "note": "客户端渲染管线重写，FPS 提升的核心。"
+    },
+    {
+      "slug": "entityculling",
+      "profiles": ["full", "strict"],
+      "note": "客户端实体/方块实体可见性剔除。"
+    },
+    {
+      "slug": "moreculling",
+      "profiles": ["full", "strict"],
+      "note": "客户端方块面、模型、告示牌等剔除。"
+    },
+    {
+      "slug": "immediatelyfast",
+      "profiles": ["full", "strict"],
+      "note": "客户端即时渲染、UI 与地图批处理。"
+    },
+    {
+      "slug": "dynamic-fps",
+      "profiles": ["full", "strict"],
+      "note": "客户端失焦/空闲时降帧，降低 GPU 与功耗。"
+    },
+    {
+      "slug": "servercore",
+      "profiles": ["full"],
+      "note": "服务端综合优化。full 开启激活范围、动态调节、刷怪上限、村民惰化等。仅服务端。"
+    },
+    {
+      "slug": "tt20",
+      "profiles": ["full"],
+      "note": "低 TPS 时按 ticks*tps/20 补偿动作耗时。full 开启全部加速项。仅服务端。"
+    },
+    {
+      "slug": "ksyxis",
+      "profiles": ["full"],
+      "note": "不加载出生点常加载区块，加快启动。会让依赖出生点区块的机器停转。仅服务端。"
+    },
+    {
+      "slug": "leaves-be-gone",
+      "profiles": ["full"],
+      "note": "树叶在 5–20 tick 内快速衰减，减少随机刻与方块更新。仅服务端。"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# 性能相关示例配置
+# 复制为 server.properties 后按需修改；缺失的键会由服务端自动补默认值。
+# 视距/模拟距离是最大的性能杠杆，但会直接改变机器行为。
+
+# 区块写入不强制同步：快，但崩溃可能丢最后几秒
+sync-chunk-writes=false
+
+# 每 tick 最多保存 8 个区块，削平自动保存尖峰
+max-auto-save-chunks-per-tick=8
+
+# 压缩阈值：带宽换 CPU。流量计费的云服保持默认 256
+network-compression-threshold=512
+
+# 视距与模拟距离
+view-distance=10
+simulation-distance=8
+
+# 实体广播范围百分比（100 = 原版）
+entity-broadcast-range-percentage=100
+
+# 服务端基础项
+online-mode=true
+max-players=20
+spawn-protection=16
+enable-command-block=true
+enable-rcon=false

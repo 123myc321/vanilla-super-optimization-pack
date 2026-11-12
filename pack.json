@@ -1,0 +1,625 @@
+{
+  "name": "Vanilla Super Optimization Pack",
+  "version": "1.0.0",
+  "minecraft": "26.2",
+  "fabricLoader": "0.19.3",
+  "java": "25",
+  "summary": "面向 Minecraft 26.2 / Fabric 的全面性能整合包：客户端渲染与服务端逻辑双侧优化，提供 full（极限性能）与 strict（机制安全）两套配置。",
+  "generatedAt": "2026-11-12T04:55:10Z",
+  "profiles": {
+    "full": "极限性能：包含会改变原版机制的优化项（激活范围、TT20、出生点区块、树叶衰减等）。",
+    "strict": "机制安全：只保留不改变红石/流体/刷怪/爆炸/tick 顺序的优化项。"
+  },
+  "mods": [
+    {
+      "slug": "cloth-config",
+      "title": "Cloth Config API",
+      "license": "LGPL-3.0-only",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      },
+      "version": "26.2.155+fabric",
+      "channel": "release",
+      "published": "2026-06-18",
+      "filename": "cloth-config-26.2.155.jar",
+      "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/Nv3xnWXd/cloth-config-26.2.155.jar",
+      "sha1": "babcf16dbd15e09d326e21ffe85ab3f7d843ef9e",
+      "sha512": "37b1e402f0df5a383656e21a38ee18cdd15cb4ba3fb62fbeba82ef4b959a4479fc32718ac0d9d154a7d9104c5f7315bfa67dbeced0b8ff240b8039d4848d5df1",
+      "size": 1135186,
+      "dependencies": [],
+      "note": "自动解析的必需前置",
+      "dependency_of": [
+        "moreculling"
+      ]
+    },
+    {
+      "slug": "c2me-fabric",
+      "title": "Concurrent Chunk Management Engine (Fabric)",
+      "license": "MIT",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "required"
+      },
+      "version": "0.4.1-beta.1.0+26.2",
+      "channel": "beta",
+      "published": "2026-06-21",
+      "filename": "c2me-fabric-mc26.2-0.4.1-beta.1.0.jar",
+      "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/hfq4dPFH/c2me-fabric-mc26.2-0.4.1-beta.1.0.jar",
+      "sha1": "284370db4ccf66653de0d250f4b990f4ed41fe1f",
+      "sha512": "21076491de36c5d680cafa494116b98a134a3d7e3cbcb77a59942bab0ceacf6c9386a80b1e4d870e501aafab27b89c0b5d7a09f1392a4d4ab43a87f9d3524841",
+      "size": 3775368,
+      "dependencies": [],
+      "note": "并发区块引擎。full 配置开启异步序列化、POI 卸载、含水层优化、流体后处理改期；strict 配置全部回原版行为。",
+      "dependency_of": []
+    },
+    {
+      "slug": "dynamic-fps",
+      "title": "Dynamic FPS",
+      "license": "MIT",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      },
+      "version": "3.11.9",
+      "channel": "release",
+      "published": "2026-06-16",
+      "filename": "dynamic-fps-3.11.9+minecraft-26.2.0-fabric.jar",
+      "url": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/pC2JjFw1/dynamic-fps-3.11.9%2Bminecraft-26.2.0-fabric.jar",
+      "sha1": "e8cd9e4fbc6d42091faffc873b0801f1189ed6a5",
+      "sha512": "79b13548d7e9de9abfa23e062724a885e5341f371c500d6570056ecea7db00c2f7ace5a7288179ad8baec575b4aa992b91dccbc940c584cb5cddf0bc7aeb892f",
+      "size": 188740,
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "mOgUt4GM",
+          "file_name": null,
+          "dependency_type": "optional"
+        },
+        {
+          "version_id": null,
+          "project_id": "9s6osm5g",
+          "file_name": null,
+          "dependency_type": "optional"
+        },
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "note": "客户端失焦/空闲时降帧，降低 GPU 与功耗。",
+      "dependency_of": []
+    },
+    {
+      "slug": "entityculling",
+      "title": "Entity Culling",
+      "license": "LicenseRef-tr7zw-Protective-License",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      },
+      "version": "1.11.3",
+      "channel": "release",
+      "published": "2026-10-08",
+      "filename": "entityculling-fabric-1.11.3-mc26.2.jar",
+      "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/uXe0pIaz/entityculling-fabric-1.11.3-mc26.2.jar",
+      "sha1": "a2210d12bdeac78daf7bb2fdc6b5d85448642cdf",
+      "sha512": "18ca7ea525144dac9474a1b178eb21baf3dcfc182618811dfca535833faece3b4c74eb8ee026c95b6dbabd084b8b3075a51d319de512caedd24595d5dd10cd30",
+      "size": 1508596,
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "note": "客户端实体/方块实体可见性剔除。",
+      "dependency_of": []
+    },
+    {
+      "slug": "fabric-api",
+      "title": "Fabric API",
+      "license": "Apache-2.0",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "required"
+      },
+      "version": "0.161.0+26.2",
+      "channel": "release",
+      "published": "2026-09-18",
+      "filename": "fabric-api-0.161.0+26.2.jar",
+      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/ewUK83HI/fabric-api-0.161.0%2B26.2.jar",
+      "sha1": "332da34ebb72171e603a0c538de17f4c54ea9e29",
+      "sha512": "2502fa5ade78e9a120b3747bc1a9a2167d6671743bea45bf115d3174c94121aeda87c549446d1a604a9c11fb828de17a551e3514ce42f3e93069dd14bdaee55b",
+      "size": 2566123,
+      "dependencies": [],
+      "note": "自动解析的必需前置",
+      "dependency_of": [
+        "leaves-be-gone",
+        "puzzles-lib",
+        "forge-config-api-port",
+        "dynamic-fps",
+        "entityculling",
+        "modernfix-mvus"
+      ]
+    },
+    {
+      "slug": "zfastnoise",
+      "title": "Fast Noise",
+      "license": "MPL-2.0",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "version": "1.0.40+26.2",
+      "channel": "release",
+      "published": "2026-08-13",
+      "filename": "zfastnoise-1.0.40+26.2.jar",
+      "url": "https://cdn.modrinth.com/data/OnlVIpq5/versions/9TGMeiu2/zfastnoise-1.0.40%2B26.2.jar",
+      "sha1": "60bf5155fd650c6c01381703a3501f27a2ecb8b0",
+      "sha512": "9dff1a998f67261c7ba275b923c5e5ed97f5e07e852513b7bbb667dab4a050995c292eec608ca58dfc3160672697584d43c7796068f3793046e92d6cf17360a2",
+      "size": 475380,
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "KOHu7RCS",
+          "file_name": null,
+          "dependency_type": "incompatible"
+        },
+        {
+          "version_id": null,
+          "project_id": "sml2FMaA",
+          "file_name": null,
+          "dependency_type": "incompatible"
+        }
+      ],
+      "note": "地形生成噪声与表层加速。pin 1.0.40：1.1.x 要求 Fabric Loader >=0.19.5，而本包基线是 0.19.3。full 开启 end/fixed/trivial；strict 关闭这三项。",
+      "dependency_of": []
+    },
+    {
+      "slug": "ferrite-core",
+      "title": "FerriteCore",
+      "license": "MIT",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "required"
+      },
+      "version": "9.0.0-fabric",
+      "channel": "release",
+      "published": "2026-03-24",
+      "filename": "ferritecore-9.0.0-fabric.jar",
+      "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/d5ddUdiB/ferritecore-9.0.0-fabric.jar",
+      "sha1": "eac76ff0f3753422c61b2c44487d0d195d88d4bc",
+      "sha512": "d81fa97e11784c19d42f89c2f433831d007603dd7193cee45fa177e4a6a9c52b384b198586e04a0f7f63cd996fed713322578bde9a8db57e1188854ae5cbe584",
+      "size": 72677,
+      "dependencies": [],
+      "note": "方块状态内存压缩，显著降低堆占用。",
+      "dependency_of": []
+    },
+    {
+      "slug": "forge-config-api-port",
+      "title": "Forge Config API Port",
+      "license": "MPL-2.0",
+      "profiles": [
+        "full"
+      ],
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "version": "26.2.1",
+      "channel": "release",
+      "published": "2026-06-21",
+      "filename": "ForgeConfigAPIPort-v26.2.1-mc26.2.x-Fabric.jar",
+      "url": "https://cdn.modrinth.com/data/ohNO6lps/versions/rSd3GiG8/ForgeConfigAPIPort-v26.2.1-mc26.2.x-Fabric.jar",
+      "sha1": "a4083de0d8e0c19b993d21f7a576216efb5ceb23",
+      "sha512": "948b8d83de61a11aad2fc0bb0744a8b4848c9b2f0663c9aa015389d9560b3fa78518e609c44ec90278de0e159a92ebd721ccbdebb453aa455c353e5cd19413bf",
+      "size": 609550,
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "mOgUt4GM",
+          "file_name": null,
+          "dependency_type": "optional"
+        }
+      ],
+      "note": "自动解析的必需前置",
+      "dependency_of": [
+        "leaves-be-gone",
+        "puzzles-lib"
+      ]
+    },
+    {
+      "slug": "immediatelyfast",
+      "title": "ImmediatelyFast",
+      "license": "LGPL-3.0-or-later",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      },
+      "version": "1.16.5+26.2-fabric",
+      "channel": "release",
+      "published": "2026-09-16",
+      "filename": "ImmediatelyFast-Fabric-1.16.5+26.2.jar",
+      "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/pMWERcSu/ImmediatelyFast-Fabric-1.16.5%2B26.2.jar",
+      "sha1": "0286260261591fe77ba0d332d5d5a2d2e868c2c6",
+      "sha512": "5836b089072c0fd796613d42c3bd01c7e401b6ad53de80328bb9d74d585de9be0ff0cfc4d6ffa1ed41008750573b0525eff8c064162a2f724ad16817a8fdaf22",
+      "size": 100500,
+      "dependencies": [],
+      "note": "客户端即时渲染、UI 与地图批处理。",
+      "dependency_of": []
+    },
+    {
+      "slug": "krypton",
+      "title": "Krypton",
+      "license": "LGPL-3.0-only",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "required"
+      },
+      "version": "0.3.1",
+      "channel": "release",
+      "published": "2026-07-14",
+      "filename": "krypton-0.3.1.jar",
+      "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/5WeL0Nkz/krypton-0.3.1.jar",
+      "sha1": "c83ed92c0f9f8523d7e6096151e74222fea91e96",
+      "sha512": "b8d9af34cd0050493afb8a6232cb8f785daa9d8887b7045f6e6a53c6bb9b5ffc4318fd9b0347a940eacfeba4773f10cb80ae0be1e79ce4c1888f96eda21e564e",
+      "size": 268842,
+      "dependencies": [],
+      "note": "网络栈优化（Netty 事件循环、包合并）。",
+      "dependency_of": []
+    },
+    {
+      "slug": "ksyxis",
+      "title": "Ksyxis",
+      "license": "MIT",
+      "profiles": [
+        "full"
+      ],
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "version": "1.4.6",
+      "channel": "release",
+      "published": "2026-10-08",
+      "filename": "Ksyxis-1.4.6.jar",
+      "url": "https://cdn.modrinth.com/data/2ecVyZ49/versions/kzLBJQLn/Ksyxis-1.4.6.jar",
+      "sha1": "6de6271329e0c83e3ccc0512a0d3cfcc3e790d3f",
+      "sha512": "1571cd9b15b6733002dd164beab4ad1022fab2c904414b39db6fb609a41c48cca394f1751e5634ebc555795d9bd9dba48c2c280c152d9e0f570795d47a91c1d5",
+      "size": 23873,
+      "dependencies": [],
+      "note": "不加载出生点常加载区块，加快启动。会让依赖出生点区块的机器停转。仅服务端。",
+      "dependency_of": []
+    },
+    {
+      "slug": "leaves-be-gone",
+      "title": "Leaves Be Gone",
+      "license": "MPL-2.0",
+      "profiles": [
+        "full"
+      ],
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "version": "26.2.0",
+      "channel": "release",
+      "published": "2026-06-17",
+      "filename": "LeavesBeGone-v26.2.0-mc26.2.x-Fabric.jar",
+      "url": "https://cdn.modrinth.com/data/AVq17PqV/versions/5vBSTK0b/LeavesBeGone-v26.2.0-mc26.2.x-Fabric.jar",
+      "sha1": "938e0f3f4aadd5e732056d2863b1aebc8e630f7d",
+      "sha512": "81be72b27b91a7feb54a9fd6c99de9ba2a9a92a046853505dd1bd463b91f11486a40645b13ad90db2e1bc79cd168b9d7a1287ee7054713940b360e57822139dc",
+      "size": 41880,
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "ohNO6lps",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "QAGBst4M",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "note": "树叶在 5–20 tick 内快速衰减，减少随机刻与方块更新。仅服务端。",
+      "dependency_of": []
+    },
+    {
+      "slug": "lithium",
+      "title": "Lithium",
+      "license": "LGPL-3.0-only",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "required"
+      },
+      "version": "mc26.2-0.25.3-fabric",
+      "channel": "release",
+      "published": "2026-07-29",
+      "filename": "lithium-fabric-0.25.3+mc26.2.jar",
+      "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/f7vZ0VWU/lithium-fabric-0.25.3%2Bmc26.2.jar",
+      "sha1": "435ad0289209bb72195e7a423756a03f5dfa5a9a",
+      "sha512": "148b638f3c6229fbaf487120a2344a0af5e411a5aa6533d5db9d75da0a8c0d8304f63eb4cca13f4d03b2c9b4c23d559dd74c1d832422ef8a3087bd005e62a8bd",
+      "size": 912850,
+      "dependencies": [],
+      "note": "游戏逻辑优化。full 配置不写任何 override，红石/流体/刷怪/爆炸/随机刻等优化全部开启；strict 配置关闭 12 项会改变行为的 mixin。",
+      "dependency_of": []
+    },
+    {
+      "slug": "modernfix-mvus",
+      "title": "ModernFix-mVUS",
+      "license": "LGPL-3.0-only",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "required"
+      },
+      "version": "5.27.19-build.2",
+      "channel": "release",
+      "published": "2026-09-25",
+      "filename": "modernfix-5.27.19-build.2.jar",
+      "url": "https://cdn.modrinth.com/data/TjSm1wrD/versions/50uUra83/modernfix-5.27.19-build.2.jar",
+      "sha1": "a14d2ba0fd0d56d12d48bb9f1c44fd3d345bf5e2",
+      "sha512": "75b1aecabdb13fb61969d730c328cfc102b1c50fa9620c60b8433d830a19b2d2bea32aca48ca4934b1be98f8a6fb5bde0039efd273b47bd05da40a87efce36ac",
+      "size": 1173963,
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "note": "ModernFix 的 26.2 维护分支（mVUS）。启动、内存、动态资源、模型加载优化。",
+      "dependency_of": []
+    },
+    {
+      "slug": "moreculling",
+      "title": "More Culling",
+      "license": "GPL-3.0-only",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      },
+      "version": "1.8.2",
+      "channel": "release",
+      "published": "2026-11-08",
+      "filename": "moreculling-fabric-26.2-1.8.2.jar",
+      "url": "https://cdn.modrinth.com/data/51shyZVL/versions/Qc7V2eKG/moreculling-fabric-26.2-1.8.2.jar",
+      "sha1": "0c84eb55036d82e34b329658c481fd8b84c6f0e1",
+      "sha512": "7447bc7f269fdfee917ad99fa93d81db86f9b3379c7098e1172fda8a443e09aa4cfd68074a33f57cf40ea7d44135e74882b6b1a1ec9c8a9cd3e0e8d4ca64ca56",
+      "size": 364112,
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "9s6osm5g",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "note": "客户端方块面、模型、告示牌等剔除。",
+      "dependency_of": []
+    },
+    {
+      "slug": "packet-fixer",
+      "title": "Packet Fixer",
+      "license": "MIT",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "required"
+      },
+      "version": "3.3.6",
+      "channel": "release",
+      "published": "2026-07-16",
+      "filename": "PacketFixer-fabric-3.3.6.jar",
+      "url": "https://cdn.modrinth.com/data/c7m1mi73/versions/V1pYl7hL/PacketFixer-fabric-3.3.6.jar",
+      "sha1": "f127ee3839b315d496ea605fe9e427325f0745e8",
+      "sha512": "4d518d2c9f36a890caca55cc201b871b8f1b356064116e3e812c7d179f9554e9f2017f6bbd2db2e0fb61e3c1d410ab643f9e3ceecc0831ed171c67830795067a",
+      "size": 31156,
+      "dependencies": [],
+      "note": "放宽数据包/NBT 上限，避免大区块、大容器导致的踢出与静默失败。",
+      "dependency_of": []
+    },
+    {
+      "slug": "puzzles-lib",
+      "title": "Puzzles Lib",
+      "license": "MPL-2.0",
+      "profiles": [
+        "full"
+      ],
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "version": "26.2.5",
+      "channel": "release",
+      "published": "2026-10-11",
+      "filename": "puzzleslib-v26.2.5-mc26.2.x+fabric.jar",
+      "url": "https://cdn.modrinth.com/data/QAGBst4M/versions/TXPuVSH3/puzzleslib-v26.2.5-mc26.2.x%2Bfabric.jar",
+      "sha1": "da3af4c38ee227d16f4426eab08cb943c9b3f15d",
+      "sha512": "5e243925e717a1891a9afca92eb7ee6619aa794324d15e7614fed2b184cea34692d5a8aca5ca2789e58e61459e4b48aee303cab2119d4dde3d2a4a46af206f64",
+      "size": 1153987,
+      "dependencies": [
+        {
+          "version_id": null,
+          "project_id": "ohNO6lps",
+          "file_name": null,
+          "dependency_type": "required"
+        },
+        {
+          "version_id": null,
+          "project_id": "P7dR8mSH",
+          "file_name": null,
+          "dependency_type": "required"
+        }
+      ],
+      "note": "自动解析的必需前置",
+      "dependency_of": [
+        "leaves-be-gone"
+      ]
+    },
+    {
+      "slug": "servercore",
+      "title": "ServerCore",
+      "license": "MIT",
+      "profiles": [
+        "full"
+      ],
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "version": "1.5.19+26.2",
+      "channel": "release",
+      "published": "2026-06-24",
+      "filename": "servercore-fabric-1.5.19+26.2.jar",
+      "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/edrtnY9v/servercore-fabric-1.5.19%2B26.2.jar",
+      "sha1": "43eda9e44e32e0e736ada0ff125f83cb87cbd59a",
+      "sha512": "aa4cfc93f8e02172910302444330e37713dfcf2047d28e55eb7323a3cd5d51493374a0959aa3e626ec2bf43fc707a755508b83454bb34b6d57d65c069929074b",
+      "size": 909932,
+      "dependencies": [],
+      "note": "服务端综合优化。full 开启激活范围、动态调节、刷怪上限、村民惰化等。仅服务端。",
+      "dependency_of": []
+    },
+    {
+      "slug": "sodium",
+      "title": "Sodium",
+      "license": "LicenseRef-Polyform-Shield-1.0.0",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      },
+      "version": "mc26.2-0.9.2-fabric",
+      "channel": "release",
+      "published": "2026-09-11",
+      "filename": "sodium-fabric-0.9.2+mc26.2.jar",
+      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/xJZxADzI/sodium-fabric-0.9.2%2Bmc26.2.jar",
+      "sha1": "62a70961a5b3e06938e06ab5f2dc4c5a51cf3323",
+      "sha512": "9b7a7aade8824543ce2a804fddfd04e37f57d1f91c00574e7dc87e554eb1835d888313ee6f715a7599bd729840cf01fd74e02aeae87b4e5a3c10c34a016e407c",
+      "size": 1885572,
+      "dependencies": [],
+      "note": "客户端渲染管线重写，FPS 提升的核心。",
+      "dependency_of": []
+    },
+    {
+      "slug": "tt20",
+      "title": "TT20 (TPS Fixer)",
+      "license": "LicenseRef-PolyForm-Shield-1.0.0",
+      "profiles": [
+        "full"
+      ],
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "version": "0.8.5",
+      "channel": "release",
+      "published": "2026-09-16",
+      "filename": "tt20-0.8.5+mc26.1.1-fabric.jar",
+      "url": "https://cdn.modrinth.com/data/YS3ZignI/versions/dzGfhyWj/tt20-0.8.5%2Bmc26.1.1-fabric.jar",
+      "sha1": "476e5843f069af5c90c8e2a9f24f962e14d16f7f",
+      "sha512": "e42314dd32c0ec1e7d93744a9a0f9dabc0bdd1bec0fcaa2ebf878a3555c1226d613b21a87de103862b7846be410e8497565d897303525445cd03f604c62c80dc",
+      "size": 51892,
+      "dependencies": [],
+      "note": "低 TPS 时按 ticks*tps/20 补偿动作耗时。full 开启全部加速项。仅服务端。",
+      "dependency_of": []
+    },
+    {
+      "slug": "vmp-fabric",
+      "title": "Very Many Players (Fabric)",
+      "license": "MIT",
+      "profiles": [
+        "full",
+        "strict"
+      ],
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      },
+      "version": "0.2.0+beta.7.236+26.2",
+      "channel": "alpha",
+      "published": "2026-07-02",
+      "filename": "vmp-fabric-mc26.2-0.2.0+beta.7.236-all.jar",
+      "url": "https://cdn.modrinth.com/data/wnEe9KBa/versions/d6FfpWFI/vmp-fabric-mc26.2-0.2.0%2Bbeta.7.236-all.jar",
+      "sha1": "dcf1295db267f7b519ecdd7d1c9499910c7e6fc0",
+      "sha512": "2e0fd87e66f35f00f634176d4072a6c6d1eee965d1817833709ad3ea73e4f2719fa152d5e95b5ab8216b064c7db124b7f13838ebea87d92f7a72df82839e9bd5",
+      "size": 412247,
+      "dependencies": [],
+      "note": "Very Many Players，高玩家数与区块发送优化。仅供服务端；full 开启异步传送门，strict 关闭。",
+      "dependency_of": []
+    }
+  ]
+}
